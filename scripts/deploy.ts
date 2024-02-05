@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const pooh = await ethers.deployContract("PoohnetToken");
+  const pooh = await ethers.deployContract("PoohToken");
 
   await pooh.waitForDeployment();
 

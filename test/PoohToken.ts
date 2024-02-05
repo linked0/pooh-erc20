@@ -14,7 +14,7 @@ describe("Lock", function () {
     // Contracts are deployed using the first signer/account by default
     const [owner, otherAccount] = await ethers.getSigners();
 
-    const Poo = await ethers.getContractFactory("PoohnetToken");
+    const Poo = await ethers.getContractFactory("PoohToken");
     const poo = await Poo.deploy();
 
     return { poo, owner, otherAccount };
