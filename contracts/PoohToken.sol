@@ -8,7 +8,7 @@ contract PoohToken is ERC20, Ownable {
     uint8 public constant DECIMALS = 7;
     uint256 public constant INITIAL_SUPPLY = 5421301301958463;
 
-    constructor() ERC20("POOHTOKEN", "POO") Ownable (msg.sender) {
+    constructor() ERC20("POOHTOKEN", "POO") {
         _mint(msg.sender, INITIAL_SUPPLY);
     }
 
