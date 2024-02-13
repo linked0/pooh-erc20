@@ -9,7 +9,9 @@ async function main() {
     const pooh = await ethers.getContractAt("PoohToken", process.env.POOHTOKEN_ADDRESS) as PoohToken;
     console.log(`PoohToken address: ${pooh.target}`);
     const balance = await pooh.balanceOf(wallet.address);
+    const decimals = await pooh.decimals();
     // print balance with 7 decimal places
+    console.log(`Decimals: ${decimals}`);
     console.log(`Balance: ${ethers.formatUnits(balance, 7)}`);
 }
 
