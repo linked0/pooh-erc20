@@ -9,12 +9,16 @@ contract PoohToken is ERC20, Ownable {
     uint256 public constant INITIAL_SUPPLY = 5421301301958463;
 
     constructor() ERC20("POOHTOKEN", "POO") Ownable (msg.sender) {
-        _mint(msg.sender, INITIAL_SUPPLY * (10 ** uint256(DECIMALS)));
+        _mint(msg.sender, INITIAL_SUPPLY);
     }
 
     // Function to mint tokens
     // Only the owner of the contract (the one who deployed it) can call this function
     function mint(address to, uint256 amount) public onlyOwner {
         _mint(to, amount);
+    }
+
+    function decimals() public view virtual override returns (uint8) {
+        return DECIMALS;
     }
 }

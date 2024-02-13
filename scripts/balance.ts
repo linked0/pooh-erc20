@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
     // get wallet from sepolia admin key
-    const wallet = new ethers.Wallet(process.env.SEPOLIA_ADMIN_KEY, ethers.provider);
+    const wallet = new ethers.Wallet(process.env.ADMIN_KEY, ethers.provider);
 
     // get balance PoohToken for SEPOLIA_ADMIN_KEY from sepolia network
     console.log("POOHTOKEN ADDRESS: ", process.env.POOHTOKEN_ADDRESS);

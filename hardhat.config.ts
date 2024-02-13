@@ -59,7 +59,7 @@ const config: HardhatUserConfig = {
    },
    sepolia: {
     url: process.env.SEPOLIA_URL,
-    accounts: [process.env.SEPOLIA_ADMIN_KEY || ""],
+    accounts: [process.env.ADMIN_KEY || ""],
     chainId: parseInt(process.env.SEPOLIA_CHAIN_ID || "11155111"),
    }
   },
