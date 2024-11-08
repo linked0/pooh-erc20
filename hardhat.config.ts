@@ -50,10 +50,17 @@ const config: HardhatUserConfig = {
     hardhat: {
       accounts: { mnemonic: process.env.MNEMONIC },
     },
+    localnet: {
+      url: process.env.LOCALNET_URL,
+      accounts: [process.env.ADMIN_KEY || ""],
+      chainId: parseInt(process.env.LOCALNETCHAIN_ID || "12301"),
+      gas: 2100000,
+      gasPrice: 8000000000
+   },
     testnet: {
       url: process.env.TESTNET_URL,
       accounts: [process.env.ADMIN_KEY || ""],
-      chainId: parseInt(process.env.TESTNET_CHAIN_ID || "12301"),
+      chainId: parseInt(process.env.TESTNET_CHAIN_ID || "7212302"),
       gas: 2100000,
       gasPrice: 8000000000
    },
