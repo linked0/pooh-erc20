@@ -1,4 +1,10 @@
 {
+  "name": "pooh-token",
+  "version": "1.0.0",
+  "description": "Contracts of Poohnet Token",
+  "main": "",
+  "author": "Poohnet Foundation",
+  "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
